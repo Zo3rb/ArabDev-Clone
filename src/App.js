@@ -1,24 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Element } from 'react-scroll';
+import Header from './components/Header/Header';
+import Forms from './components/Forms/Forms';
+import Highlight from './components/Highlight/Highlight';
+import Features from './components/Features/Features';
+import Location from './components/Location/Location';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Element name="home">
+        <Header />
+      </Element>
+      <Element name="forms">
+        <Forms />
+      </Element>
+      <Element name="premium">
+        <Highlight />
+      </Element>
+      <Element name="features">
+        <Features />
+      </Element>
+      <Element name="location">
+        <Location />
+      </Element>
+      <Footer />
     </div>
   );
 }
